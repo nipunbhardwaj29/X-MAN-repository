@@ -1,0 +1,83 @@
+/*************************************************************************************
+ *
+ * Spray diagram definition
+ * 
+ * This file contains the definition of a graphical editor using the Spray Language.
+ * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
+ *
+ * See also atomicDesign.properties to configure generator properties.
+ *************************************************************************************/
+// Add import statements here
+
+import xcore.* 
+
+diagram AtomicDesign for AtomicComponent
+
+class DataElement icon "shared/dataElement.gif" {
+	shape DataItemShape {
+		constant "d" into dataItemLabel
+	}
+	behavior {
+		create into dataElements palette "Data" 
+	}
+} 
+
+class ComputationUnit icon "atomicComponent/computationUnit.gif" {
+	shape ComputationUnitShape {
+		constant "CU" into cuLable
+		reference methods into methodsReferences
+	}
+	behavior {
+		create into computationUnit "Computation Unit"palette "Computation"
+	}
+}
+
+ class Method icon "atomicComponent/method.gif"{ 
+ 	shape MethodShape{
+ 		name into  methodNameLabel
+ 	}
+ 	behavior{
+ 		create palette "Computation"
+ 	}
+ 	 
+ }
+
+
+class DataElementToComputationUnitAssociation icon "connection16.gif" {
+	connection AssociationConnection {
+		from source;
+		to target;
+	}
+	behavior {
+		create into dataElementToComputationUnitAssociations "Data Element - CU" palette "Data"
+	}
+} 
+
+
+class Service icon "shared/service.gif"{
+	shape ServiceShape {
+		name into serviceNameLabel
+		reference parameters into serviceParameter
+	}
+	behavior {
+		create into services palette "Services"
+	}
+}
+
+class Input icon "shared/input.gif"{
+	shape InputShape {
+		constant "i" into inputParameterLabel
+	}
+	behavior {
+		create palette "Services"
+	}
+}
+
+class Output icon "shared/output.gif"{
+	shape OutputShape {
+		constant "o" into outputParameterLabel
+	}
+	behavior {
+		create palette "Services"
+	}
+}

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+ Generated on Tue Apr 01 16:32:07 BST 2014 by Spray Plugin.xtend
+ This file will be generated only once if it need to be regenerated, remove this file.
+ 
+-->
+<plugin>
+  
+  <!-- GRAPHITI EDITOR EXTENSION AUTOGEN START -->
+     <!-- Potentially redefine the EDITOR EXTENSION TO ALLOW FOR OUR OWN EDITOR SUBCLASS TO BE USED. 
+<extension
+      point="org.eclipse.ui.editors">
+   <editor
+       class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignDiagramEditor"
+       contributorClass="org.eclipse.graphiti.ui.editor.DiagramEditorActionBarContributor"
+       default="true"
+       extensions="diagram"
+       icon="icons/diagram.gif"
+       id="man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignDiagramEditor"
+       matchingStrategy="org.eclipse.graphiti.ui.editor.DiagramEditorFactory$DiagramEditorMatchingStrategy"
+       name="%_diagram_editor_name">
+    <contentTypeBinding
+          contentTypeId="org.eclipse.graphiti.content.diagram">
+    </contentTypeBinding>
+   </editor>
+</extension>
+-->
+     <!-- GRAPHITI EDITOR EXTENSION AUTOGEN END -->
+  
+  <extension
+       point="org.eclipse.graphiti.ui.diagramTypes">
+    <!-- DIAGRAM TYPE AUTOGEN START -->
+     <diagramType
+  description="This is the diagram type for the AtomicDesign diagram type"
+  id="man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignDiagramType"
+  name="AtomicDesign Graphiti Diagram Type"
+  type="AtomicDesign">
+</diagramType>
+     <!-- DIAGRAM TYPE AUTOGEN END -->
+  </extension>
+  
+  <extension
+       point="org.eclipse.graphiti.ui.diagramTypeProviders">
+    <!-- DIAGRAM TYPE PROVIDER AUTOGEN START -->
+     <diagramTypeProvider
+  class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignDiagramTypeProvider"
+  description="This is my editor for the AtomicDesign diagram type"
+  id="man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignDiagramTypeProvider"
+  name="AtomicDesign editor">
+  <diagramType
+        id="man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignDiagramType">
+  </diagramType>
+    <imageProvider
+           id="man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignImageProvider">
+     </imageProvider>
+</diagramTypeProvider>
+     <!-- DIAGRAM TYPE PROVIDER AUTOGEN END -->
+  </extension>
+  
+  
+  <extension
+       point="org.eclipse.graphiti.ui.imageProviders">
+    <!-- IMAGE PROVIDER AUTOGEN START -->
+     <imageProvider
+      class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignImageProvider"
+         id="man.ac.uk.xman.spray.atomicdesign.diagram.AtomicDesignImageProvider">
+</imageProvider>
+     <!-- IMAGE PROVIDER AUTOGEN END -->
+  </extension>
+  
+  <extension
+       point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+    <propertyContributor contributorId="AtomicDesign.PropertyContributor">
+       <propertyCategory category="AtomicDesignCategory">
+       </propertyCategory>
+    </propertyContributor>
+  </extension>
+  
+  <extension
+       point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+    <propertyTabs contributorId="AtomicDesign.PropertyContributor">
+      <!-- PROPERTY TAB AUTOGEN START -->
+     <propertyTab label="Main" category="AtomicDesignCategory"
+    id="AtomicDesign.main.tab">
+</propertyTab>
+     <!-- PROPERTY TAB AUTOGEN END -->
+    </propertyTabs>
+  </extension>
+  
+  <!-- PROPERTY SECTIONS AUTOGEN START -->
+     <extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="AtomicDesign.PropertyContributor">
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.DataElementDatatypeSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.DataElementFilter"
+   id="AtomicDesign.main.tab.DataElement.datatype">
+  </propertySection>
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.DataElementDefaultValueSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.DataElementFilter"
+   afterSection="AtomicDesign.main.tab.DataElement.datatype"
+   id="AtomicDesign.main.tab.DataElement.defaultValue">
+  </propertySection>
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.DataElementValueSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.DataElementFilter"
+   afterSection="AtomicDesign.main.tab.DataElement.defaultValue"
+   id="AtomicDesign.main.tab.DataElement.value">
+  </propertySection>
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.DataElementNameSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.DataElementFilter"
+   afterSection="AtomicDesign.main.tab.DataElement.value"
+   id="AtomicDesign.main.tab.DataElement.name">
+  </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="AtomicDesign.PropertyContributor">
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.ComputationUnitLanguageSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.ComputationUnitFilter"
+   id="AtomicDesign.main.tab.ComputationUnit.language">
+  </propertySection>
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.ComputationUnitSourceCodeSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.ComputationUnitFilter"
+   afterSection="AtomicDesign.main.tab.ComputationUnit.language"
+   id="AtomicDesign.main.tab.ComputationUnit.sourceCode">
+  </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="AtomicDesign.PropertyContributor">
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.MethodNameSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.MethodFilter"
+   id="AtomicDesign.main.tab.Method.name">
+  </propertySection>
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.MethodSignatureSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.MethodFilter"
+   afterSection="AtomicDesign.main.tab.Method.name"
+   id="AtomicDesign.main.tab.Method.signature">
+  </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="AtomicDesign.PropertyContributor">
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="AtomicDesign.PropertyContributor">
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.ServiceNameSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.ServiceFilter"
+   id="AtomicDesign.main.tab.Service.name">
+  </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="AtomicDesign.PropertyContributor">
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.InputOrderSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.InputFilter"
+   id="AtomicDesign.main.tab.Input.order">
+  </propertySection>
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.InputDataTypeSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.InputFilter"
+   afterSection="AtomicDesign.main.tab.Input.order"
+   id="AtomicDesign.main.tab.Input.dataType">
+  </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="AtomicDesign.PropertyContributor">
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.OutputOrderSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.OutputFilter"
+   id="AtomicDesign.main.tab.Output.order">
+  </propertySection>
+  <propertySection tab="AtomicDesign.main.tab"
+   class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:man.ac.uk.xman.spray.atomicdesign.property.OutputDataTypeSection"
+   filter="man.ac.uk.xman.spray.atomicdesign.property.OutputFilter"
+   afterSection="AtomicDesign.main.tab.Output.order"
+   id="AtomicDesign.main.tab.Output.dataType">
+  </propertySection>
+    </propertySections>
+</extension>
+
+     <!-- PROPERTY SECTIONS AUTOGEN END -->
+  
+  <!-- NEW DIAGRAM WIZARD AUTOGEN START -->
+     <extension
+      point="org.eclipse.ui.newWizards">
+      <category
+         name="AtomicDesign"
+         id="org.eclipselabs.spray.AtomicDesign">
+         </category>
+   <wizard
+         category="org.eclipselabs.spray.AtomicDesign"
+         class="man.ac.uk.xman.spray.atomicdesign.internal.ExecutableExtensionFactory:org.eclipselabs.spray.runtime.graphiti.wizard.NewDiagramWizard"
+         descriptionImage="icons/AtomicDesign-32.png"
+         icon="icons/AtomicDesign-16.png"
+         id="org.eclipselabs.spray.AtomicDesign.NewDiagramWizard"
+         name="New AtomicDesign Diagram"
+         preferredPerspectives="org.eclipse.graphiti.examples.common.perspective.GFPerspective"
+         project="false">
+   </wizard>
+</extension>
+     <!-- NEW DIAGRAM WIZARD AUTOGEN END -->
+  <extension
+            point="org.eclipse.ui.commands">
+         <command
+               defaultHandler="man.ac.uk.xman.spray.atomicdesign.deposit.DepositAtomicComponent"
+               id="man.ac.uk.xman.spray.atomicdesign.toolbarbuttons.DepositAtomicComponent"
+               name="Deposit">
+         </command>
+      </extension>
+  <extension  point="org.eclipse.ui.menus">
+         <menuContribution
+               allPopups="false"
+               locationURI="toolbar:org.eclipse.ui.main.toolbar">
+            <toolbar
+                  id="DepositToolbar">
+               <command
+                     commandId="man.ac.uk.xman.spray.atomicdesign.toolbarbuttons.DepositAtomicComponent"
+                     icon="icons/repository/arrowdown.png"
+                     label="Deposit"
+                     style="push"
+                     tooltip="Deposit">
+               </command>
+               <command
+                     commandId="man.ac.uk.xman.spray.atomicdesign.toolbarbuttons.DepositAtomicComponent"
+                     icon="icons/repository/arrowup.png"
+                     label="Retrieve"
+                     style="push"
+                     tooltip="Retrieve">
+               </command>
+            </toolbar>
+         </menuContribution>
+      </extension>
+</plugin>

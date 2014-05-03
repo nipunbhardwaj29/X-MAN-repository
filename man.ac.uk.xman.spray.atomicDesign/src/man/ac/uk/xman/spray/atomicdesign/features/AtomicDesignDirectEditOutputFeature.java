@@ -1,0 +1,23 @@
+/*************************************************************************************
+ *
+ * Generated on Mon Mar 24 15:25:57 GMT 2014 by Spray DirectEditFeature.xtend
+ * 
+ * This file is an extension point: copy to "src" folder to manually add code to this
+ * extension point.
+ *
+ *************************************************************************************/
+package man.ac.uk.xman.spray.atomicdesign.features;
+
+import org.eclipse.graphiti.features.IFeatureProvider;
+import org.eclipse.graphiti.features.context.IDirectEditingContext;
+
+public class AtomicDesignDirectEditOutputFeature extends AtomicDesignDirectEditOutputFeatureBase {
+    public AtomicDesignDirectEditOutputFeature(IFeatureProvider fp) {
+        super(fp);
+    }
+    
+    @Override
+    public boolean canDirectEdit(IDirectEditingContext context) {
+    	return false;
+    }
+}
